@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "securefile"
+version = "0.1.0"
+description = "AES-256-GCM + LSB steganography tool (GUI Edition)"
+authors = [
+  { name = "Aftab-73" }
+]
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "cryptography>=40.0",
+    "Pillow>=10.0",
+    "customtkinter",
+    "argon2-cffi"
+]
+
+[project.scripts]
+securefile = "securefile.gui:main"
